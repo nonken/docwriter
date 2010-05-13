@@ -1,0 +1,110 @@
+/* Default classes */
+.displayNone {
+	display: none !important;
+}
+
+/* Layout */
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	border: none !important;
+}
+
+.leftPane {
+	width: 25%;
+}
+
+/* Tabs */
+
+.dijitTabContainerTopStrip {
+	border: 1px solid #B5BCC7;
+	border-bottom: none;
+}
+
+.nowrapTabStrip {
+	padding: 3px 3px 0;
+}
+
+/* Editing */
+.editor {
+	font-family: monospace;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.toolbar {
+	height: 24px;
+	font-size: 12px !important;
+	overflow: hidden;
+}
+
+.console {
+	background: #1b1b1b !important;
+	color: #fff;
+	height: 100px;
+}
+
+.logo {
+	background: url(../img/logoSmall.png) no-repeat;
+	width: 85px;
+	height: 22px;
+	display: inline-block;
+}
+
+.quickstart {
+	position: absolute;
+	background: white;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	z-index: 99;
+}
+
+	.quickstart h2 {
+		background: url(../img/logo.png) no-repeat;
+		padding-left: 190px;
+		height: 44px;
+		font-size: 10px;
+	}
+
+.info {
+	padding: 1em;
+	margin: 0 auto;
+	font-size: .9em;
+	display: block;
+	-webkit-border-radius: 4px;
+}
+
+.highlight {
+	background: #d8f5d2;
+	border: 1px solid #8ad57b;
+	color: #334932;
+	display: inline-block;
+}
+
+.error {
+	margin: 10px auto 0;
+	font-size: .9em;
+	background: #faa7a7;
+	color: white;
+	border: 1px solid #e35353;
+	display: inline-block;
+	-webkit-border-radius: 4px;
+}
+
+.error span {
+	margin: 1em;
+	display: inline-block;
+}
