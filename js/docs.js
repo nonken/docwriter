@@ -210,6 +210,11 @@ docs.prototype.connectEvents = function(){
 		init.maximizable = true;
 		init.resizable = true;
 
+		// Manually set docIndex if it doesn't exist
+		if (!this.config.docIndex){
+			this.config.docIndex = this.config.docRoot+"/build/html/index.html";
+		}
+
 		var
 			docs = air.File.applicationDirectory.resolvePath(this.config.docIndex),
 			bounds = new air.Rectangle((air.Capabilities.screenResolutionX - 900) / 2, (air.Capabilities.screenResolutionY - 700) / 2, 900, 700),
@@ -280,7 +285,7 @@ docs.prototype.connectEvents = function(){
 	});
 
 	this.nlSettingsSave.onclick(this, function(){
-		if (!this.config.docRoot || !this.config.docIndex){
+		if (!this.config.docRoot){
 			this.nlError.query("> span").attr("innerHTML", "Please make sure you have your doc directory selected");
 			this.nlError.wipeIn({
 				beforeBegin: function(n){
@@ -293,6 +298,10 @@ docs.prototype.connectEvents = function(){
 			return;
 		}else if (this.errorVisible){
 			this.nlError.attr("innerHTML", "Please make sure you have your doc directory selected").wipeOut().play()
+		}
+
+		if (!this.config.docIndex){
+			alert("You have not set a doc index. This might be because you have not yet build your docs for the first time.");
 		}
 
 		dojo.fadeOut({
